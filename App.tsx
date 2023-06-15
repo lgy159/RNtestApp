@@ -8,12 +8,11 @@ import {
 } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { useEffect, useRef, useState } from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Register } from "./src/components/RegisterScreen";
 import { Login } from "./src/components/LoginScreen";
 import { Home } from "./src/components/HomeScreen";
 import { CustomHook } from "./src/components/CustomHook";
+import { TabNavigator } from "./src/components/TabNavigator";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,14 +20,15 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
+        <Stack.Screen name="testApp" component={TabNavigator} />
+        {/* <Stack.Screen
           name="Home"
           component={Home}
           options={{ title: "Start Screen" }}
         />
         <Stack.Screen name="CustomHook" component={CustomHook} />
         <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Register" component={Register} />
+        <Stack.Screen name="Register" component={Register} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
