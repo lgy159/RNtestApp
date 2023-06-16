@@ -14,9 +14,9 @@ export const Login = (props: any) => {
   const navigation = props.navigation;
   return (
     <View style={styles.container}>
-      <View
+      {/* <View
         style={{
-          flex: 1,
+          // flex: 1,
           paddingTop: 40,
           backgroundColor: "#fff",
           alignItems: "center",
@@ -34,12 +34,12 @@ export const Login = (props: any) => {
             left: 10,
           }}
           onPress={() => navigation.goBack()}
-        />
-      </View>
+        /> 
+      </View> */}
 
       <View
         style={{
-          flex: 2,
+          flex: 1,
           backgroundColor: "#fff",
           alignItems: "center",
         }}

@@ -1,11 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-  Button,
-  Animated,
-} from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Register } from "./src/components/RegisterScreen";
@@ -13,23 +6,12 @@ import { Login } from "./src/components/LoginScreen";
 import { Home } from "./src/components/HomeScreen";
 import { CustomHook } from "./src/components/CustomHook";
 import { TabNavigator } from "./src/components/TabNavigator";
-
-const Stack = createNativeStackNavigator();
+import { StackNavigator } from "./src/components/StackNavigator";
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="testApp" component={TabNavigator} />
-        {/* <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{ title: "Start Screen" }}
-        />
-        <Stack.Screen name="CustomHook" component={CustomHook} />
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Register" component={Register} /> */}
-      </Stack.Navigator>
+      <StackNavigator />
     </NavigationContainer>
   );
 }
