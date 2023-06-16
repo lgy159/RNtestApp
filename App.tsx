@@ -7,12 +7,16 @@ import { Home } from "./src/components/HomeScreen";
 import { CustomHook } from "./src/components/CustomHook";
 import { TabNavigator } from "./src/components/TabNavigator";
 import { StackNavigator } from "./src/components/StackNavigator";
+import { store } from "./src/store";
+import { Provider } from "react-redux";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <StackNavigator />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <StackNavigator />
+      </NavigationContainer>
+    </Provider>
   );
 }
 
